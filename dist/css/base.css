@@ -1,0 +1,18 @@
+:root {
+  font-family: Inter, sans-serif;
+}
+
+body {
+  font-size: 1.4em;
+}
+
+header > .info {
+  color: #333;
+  align-items: start;
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  column-gap: 16px;
+}
+
+/*# sourceMappingURL=base.css.map */
