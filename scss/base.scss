@@ -1,20 +1,82 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 :root {
   font-family: Inter, sans-serif;
+  margin: $margin*2;
 }
 
 // Define variables
 
 body {
   font-size: 1.4em;
+  
 }
 
 header > .info {
   color: $primary-color;
+  display: block;  // Default to block layout for smaller screens
+
+  @media (min-width: $breakpoint) {
+
   align-items: start;
   display: grid;
   grid-auto-rows: min-content;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  column-gap: $margin;
+  grid-template-columns: 3fr 3fr 3fr;
+  column-gap: $margin*2;
+  justify-content: start;
+
+  > :nth-child(3n) {
+    justify-self: end;
+  }
+    
+  }
+
+}
+
+
+// Layout
+
+hr {
+  margin: $margin*2 0;
+  color: black;
+  background-color: black;
+  height: 1px;
+  
+}
+
+main {
+  margin: $margin*4 0;
+}
+
+article {
+  margin: $margin*2 0;
+}
+
+// Links
+
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+.key-links>li>a::after {
+  content: "↗";
+  margin-left: 4px;
+}
+
+.school>a::after {
+  content: "↗";
+  margin-left: 4px;
+}
+
+// animation
+
+.title:hover {
+  color: rgb(235, 4, 4);
 }

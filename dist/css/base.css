@@ -1,5 +1,7 @@
+@charset "UTF-8";
 :root {
   font-family: Inter, sans-serif;
+  margin: 32px;
 }
 
 body {
@@ -8,11 +10,60 @@ body {
 
 header > .info {
   color: #333;
-  align-items: start;
-  display: grid;
-  grid-auto-rows: min-content;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  column-gap: 16px;
+  display: block;
+}
+@media (min-width: 50em) {
+  header > .info {
+    align-items: start;
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: 3fr 3fr 3fr;
+    column-gap: 32px;
+    justify-content: start;
+  }
+  header > .info > :nth-child(3n) {
+    justify-self: end;
+  }
+}
+
+hr {
+  margin: 32px 0;
+  color: black;
+  background-color: black;
+  height: 1px;
+}
+
+main {
+  margin: 64px 0;
+}
+
+article {
+  margin: 32px 0;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.key-links > li > a::after {
+  content: "↗";
+  margin-left: 4px;
+}
+
+.school > a::after {
+  content: "↗";
+  margin-left: 4px;
+}
+
+.title:hover {
+  color: rgb(235, 4, 4);
 }
 
 /*# sourceMappingURL=base.css.map */
