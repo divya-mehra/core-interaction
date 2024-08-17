@@ -1,84 +1,17 @@
-@charset "UTF-8";
-:root {
-  font-family: Inter, sans-serif;
-  margin: 32px;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 11 |   background-color: $bg;
+ *    |                     ^^^
+ *    '
+ *   scss/base.scss 11:21  root stylesheet */
 
-body {
-  font-size: 1.4em;
-}
-
-header > .info {
-  color: #333;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 11 \2502    background-color: $bg;\a    \2502                      ^^^\a    \2575 \a   scss/base.scss 11:21  root stylesheet";
 }
-@media (min-width: 50em) {
-  header > .info {
-    align-items: start;
-    display: grid;
-    grid-auto-rows: min-content;
-    grid-template-columns: 3fr 3fr 3fr;
-    column-gap: 32px;
-    justify-content: start;
-  }
-  header > .info > :nth-child(3n) {
-    justify-self: end;
-  }
-}
-
-hr {
-  margin: 32px 0;
-  color: black;
-  background-color: black;
-  height: 1px;
-}
-
-main {
-  margin: 64px 0;
-}
-
-article {
-  margin: 32px 0;
-}
-
-.session-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-h2 {
-  font-size: 1.2rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-  font-weight: 400;
-}
-
-ul {
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #333;
-}
-
-.key-links > li > a::after {
-  content: "↗";
-  margin-left: 4px;
-}
-
-.school > a::after {
-  content: "↗";
-  margin-left: 4px;
-}
-
-.title:hover {
-  color: rgb(235, 4, 4);
-}
-
-/*# sourceMappingURL=base.css.map */
