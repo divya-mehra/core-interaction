@@ -1,11 +1,16 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 :root {
-  font-family: Inter, sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
   margin: 32px;
+  background-color: rgba(119, 178, 167, 0.15);
 }
 
 body {
-  font-size: 1.4em;
+  font-size: 1.1em;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header > .info {
@@ -28,7 +33,7 @@ header > .info {
 
 hr {
   margin: 32px 0;
-  color: black;
+  color: #333;
   background-color: black;
   height: 1px;
 }
@@ -37,29 +42,114 @@ main {
   margin: 64px 0;
 }
 
-article {
+details {
   margin: 32px 0;
 }
 
-.session-title {
+summary {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+details > summary span.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+  margin-left: auto;
+}
+
+details summary h3 span::after {
+  content: "↓";
+}
+
+details[open] summary h3 span::after {
+  content: "↑";
+}
+
+details[open] summary {
+  color: hsla(6, 67%, 51%, 0.8);
+}
+
+details[open] .session-detail {
+  animation: sweep 1s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+summary {
+  display: flex;
+  cursor: pointer;
+  margin: 16px 0;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details {
+  user-select: none;
+}
+
+.session-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: left;
+  letter-spacing: -0.2rem;
+}
+
+.info {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
 h2 {
   font-size: 1.2rem;
+  color: #D64130;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 400;
+  margin: 1.6px;
+}
+
+h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 1.6px;
 }
 
 ul {
   list-style-type: none;
-  margin-left: 0;
+  margin: 0;
   padding-left: 0;
+}
+
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 16px;
+}
+
+ol > li {
+  margin: 1.6px 0;
+}
+
+ol > li::before {
+  content: "· ";
 }
 
 a {
@@ -67,18 +157,9 @@ a {
   color: #333;
 }
 
-.key-links > li > a::after {
+a::after {
   content: "↗";
   margin-left: 4px;
-}
-
-.school > a::after {
-  content: "↗";
-  margin-left: 4px;
-}
-
-.title:hover {
-  color: rgb(235, 4, 4);
 }
 
 /*# sourceMappingURL=base.css.map */
