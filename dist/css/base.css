@@ -41,6 +41,21 @@ article {
   margin: 32px 0;
 }
 
+.session-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
 ul {
   list-style-type: none;
   margin-left: 0;

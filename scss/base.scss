@@ -2,54 +2,65 @@
 
 :root {
   font-family: Inter, sans-serif;
-  margin: $margin*2;
+  margin: $margin * 2;
 }
 
 // Define variables
 
 body {
   font-size: 1.4em;
-  
 }
 
 header > .info {
   color: $primary-color;
-  display: block;  // Default to block layout for smaller screens
+  display: block; // Default to block layout for smaller screens
 
   @media (min-width: $breakpoint) {
+    align-items: start;
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: 3fr 3fr 3fr;
+    column-gap: $margin * 2;
+    justify-content: start;
 
-  align-items: start;
-  display: grid;
-  grid-auto-rows: min-content;
-  grid-template-columns: 3fr 3fr 3fr;
-  column-gap: $margin*2;
-  justify-content: start;
-
-  > :nth-child(3n) {
-    justify-self: end;
+    > :nth-child(3n) {
+      justify-self: end;
+    }
   }
-    
-  }
-
 }
-
 
 // Layout
 
 hr {
-  margin: $margin*2 0;
+  margin: $margin * 2 0;
   color: black;
   background-color: black;
   height: 1px;
-  
 }
 
 main {
-  margin: $margin*4 0;
+  margin: $margin * 4 0;
 }
 
 article {
-  margin: $margin*2 0;
+  margin: $margin * 2 0;
+}
+
+.session-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+// Type
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 // Links
@@ -65,12 +76,12 @@ a {
   color: $primary-color;
 }
 
-.key-links>li>a::after {
+.key-links > li > a::after {
   content: "↗";
   margin-left: 4px;
 }
 
-.school>a::after {
+.school > a::after {
   content: "↗";
   margin-left: 4px;
 }
