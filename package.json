@@ -7,7 +7,7 @@
     "build:sass": "sass scss/base.scss dist/css/base.css",
     "dev": "npm run sass",
     "deploy:checkout": "git checkout deploy || git checkout -b deploy",
-    "deploy:merge-main": "git merge main",
+    "deploy:merge-main": "git merge main -m 'Merging main into deploy for deployment'",
     "deploy:build": "npm run build:sass",
     "deploy:commit": "git add . && git commit -m 'Prepare deployment'",
     "deploy:push": "git push origin deploy",
