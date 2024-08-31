@@ -2,7 +2,7 @@
 
 // Font Import
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
   font-family: "IBM Plex Sans", sans-serif;
@@ -54,8 +54,35 @@ details {
   margin: $margin * 2 0;
 }
 
-// Collapsible
+// Entries Layout
 
+.invisibleMessage {
+  display: none;
+}
+
+@media only screen and (max-width: $breakpoint) {
+  .invisibleMessage {
+    display: block;
+  }
+}
+
+.harmonic-collection-entries {
+  opacity: 0;
+
+  @media (min-width: $breakpoint) {
+    opacity: 1;
+    align-items: start;
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(11, 1fr); /* Creates 11 equal columns */
+    gap: $margin * 2; /* Optional: Adds space between columns */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    column-gap: $margin * 2;
+    justify-content: start;
+  }
+}
+
+// Collapsible
 
 summary {
   display: flex;
@@ -64,7 +91,7 @@ summary {
   justify-content: space-between;
 }
 
-details>summary span.icon {
+details > summary span.icon {
   width: 24px;
   height: 24px;
   transition: all 0.3s;
@@ -80,7 +107,7 @@ details[open] summary h3 span::after {
 }
 
 details[open] summary {
-  color: $red-accent-80
+  color: $red-accent-80;
 }
 
 details[open] .session-detail {
@@ -88,8 +115,12 @@ details[open] .session-detail {
 }
 
 @keyframes sweep {
-  0%    {opacity: 0;}
-  100%  {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 summary {
@@ -97,7 +128,6 @@ summary {
   cursor: pointer;
   margin: $margin 0;
 }
-
 
 summary::-webkit-details-marker {
   display: none;
@@ -119,8 +149,6 @@ h1 {
   font-size: 4rem;
   text-align: left;
   letter-spacing: -0.2rem;
-  
-  
 }
 
 .info {
@@ -131,6 +159,7 @@ h1 {
 h2 {
   font-size: 1.2rem;
   color: $red-accent;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -161,12 +190,12 @@ ol {
 }
 
 ol > li {
-  margin: $margin*0.1 0;
+  margin: $margin * 0.1 0;
 }
 
 ol > li::before {
-  content: "· "
-} 
+  content: "· ";
+}
 
 a {
   text-decoration: none;
@@ -184,3 +213,50 @@ a::after {
 
 // title animation
 
+// students
+
+#april {
+  grid-row: 2; /* Moves element(s) with id "april" to the 2nd row */
+}
+#charlotte {
+  grid-row: 3;
+}
+#elsa {
+  grid-row: 4;
+}
+#hoon {
+  grid-row: 5; /* Moves element(s) with id "april" to the 2nd row */
+}
+#iris {
+  grid-row: 6;
+}
+#isabella {
+  grid-row: 7;
+}
+#julia {
+  grid-row: 8; /* Moves element(s) with id "april" to the 2nd row */
+}
+#leyla {
+  grid-row: 9;
+}
+#linda {
+  grid-row: 10;
+}
+#megan {
+  grid-row: 11; /* Moves element(s) with id "april" to the 2nd row */
+}
+#michael {
+  grid-row: 12;
+}
+#minnie {
+  grid-row: 13;
+}
+#reika {
+  grid-row: 14; /* Moves element(s) with id "april" to the 2nd row */
+}
+#temperence {
+  grid-row: 15;
+}
+#tn {
+  grid-row: 16;
+}

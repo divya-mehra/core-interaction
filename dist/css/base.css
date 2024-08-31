@@ -46,6 +46,32 @@ details {
   margin: 32px 0;
 }
 
+.invisibleMessage {
+  display: none;
+}
+
+@media only screen and (max-width: 50em) {
+  .invisibleMessage {
+    display: block;
+  }
+}
+.harmonic-collection-entries {
+  opacity: 0;
+}
+@media (min-width: 50em) {
+  .harmonic-collection-entries {
+    opacity: 1;
+    align-items: start;
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(11, 1fr); /* Creates 11 equal columns */
+    gap: 32px; /* Optional: Adds space between columns */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    column-gap: 32px;
+    justify-content: start;
+  }
+}
+
 summary {
   display: flex;
   flex-direction: row;
@@ -117,6 +143,7 @@ h1 {
 h2 {
   font-size: 1.2rem;
   color: #D64130;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -160,6 +187,66 @@ a {
 a::after {
   content: "↗";
   margin-left: 4px;
+}
+
+#april {
+  grid-row: 2; /* Moves element(s) with id "april" to the 2nd row */
+}
+
+#charlotte {
+  grid-row: 3;
+}
+
+#elsa {
+  grid-row: 4;
+}
+
+#hoon {
+  grid-row: 5; /* Moves element(s) with id "april" to the 2nd row */
+}
+
+#iris {
+  grid-row: 6;
+}
+
+#isabella {
+  grid-row: 7;
+}
+
+#julia {
+  grid-row: 8; /* Moves element(s) with id "april" to the 2nd row */
+}
+
+#leyla {
+  grid-row: 9;
+}
+
+#linda {
+  grid-row: 10;
+}
+
+#megan {
+  grid-row: 11; /* Moves element(s) with id "april" to the 2nd row */
+}
+
+#michael {
+  grid-row: 12;
+}
+
+#minnie {
+  grid-row: 13;
+}
+
+#reika {
+  grid-row: 14; /* Moves element(s) with id "april" to the 2nd row */
+}
+
+#temperence {
+  grid-row: 15;
+}
+
+#tn {
+  grid-row: 16;
 }
 
 /*# sourceMappingURL=base.css.map */
