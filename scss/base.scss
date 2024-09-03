@@ -68,6 +68,7 @@ details {
 
 .harmonic-collection-entries {
   opacity: 0;
+  margin:$margin*4 0;
 
   @media (min-width: $breakpoint) {
     opacity: 1;
@@ -212,6 +213,34 @@ a::after {
 }
 
 // title animation
+
+// question
+
+// .question {
+//   animation-name: opacityChange;
+//   animation-duration: 3s;
+// }
+
+.question:hover::after {
+  content: "Where are you in the world today?";
+  animation-name: fadeIn;
+  animation-duration: 5s;
+}
+
+.question::after {
+  content: "Today's question";
+}
+
+@keyframes fadeIn {
+  0%    { opacity: 0; }
+  100%  { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0%    { opacity: 1; }
+  100%  { opacity: 0; }
+}
+
 
 // students
 

@@ -57,6 +57,7 @@ details {
 }
 .harmonic-collection-entries {
   opacity: 0;
+  margin: 64px 0;
 }
 @media (min-width: 50em) {
   .harmonic-collection-entries {
@@ -189,6 +190,32 @@ a::after {
   margin-left: 4px;
 }
 
+.question:hover::after {
+  content: "Where are you in the world today?";
+  animation-name: fadeIn;
+  animation-duration: 5s;
+}
+
+.question::after {
+  content: "Today's question";
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 #april {
   grid-row: 2; /* Moves element(s) with id "april" to the 2nd row */
 }
