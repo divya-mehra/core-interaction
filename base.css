@@ -1,27 +1,23 @@
-// Font Import
+/* Font Import */
 
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-// Define variables
-
-$primary-color: #333;
-$blue-accent: #15039d;
-$bg: rgba(178, 167, 119, 0.05);
-$red-accent: #D64130;
-$red-accent-80: hsla(6, 67%, 51%, 0.8);
-$red-accent-60: hsla(6, 67%, 51%, 0.6);
-
-$breakpoint: 50em;
-$margin: 16px;
-
+/* Define variables equivalent values */
 :root {
+  --primary-color: #333;
+  --blue-accent: #15039d;
+  --bg: rgba(178, 167, 119, 0.05);
+  --red-accent: #D64130;
+  --red-accent-80: hsla(6, 67%, 51%, 0.8);
+  --red-accent-60: hsla(6, 67%, 51%, 0.6);
+  --margin: 16px;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
-  margin: $margin * 2;
-  background-color: $bg;
+  margin: calc(var(--margin) * 2);
+  background-color: var(--bg);
 }
 
-
+/* --breakpoint: 50em; */
 
 body {
   font-size: 1.1em;
@@ -30,47 +26,49 @@ body {
 }
 
 header > .info {
-  color: $primary-color;
-  display: block; // Default to block layout for smaller screens
+  color: var(--primary-color);
+  display: block; /* Default to block layout for smaller screens */
+}
 
-  @media (min-width: $breakpoint) {
+@media (min-width: 50em) {
+  header > .info {
     align-items: start;
     display: grid;
     grid-auto-rows: min-content;
     grid-template-columns: 3fr 3fr 3fr;
-    column-gap: $margin * 2;
+    column-gap: calc(var(--margin) * 2);
     justify-content: start;
-
-    > :nth-child(3n) {
-      justify-self: end;
-    }
+  }
+  
+  header > .info > :nth-child(3n) {
+    justify-self: end;
   }
 }
 
-// Layout
+/* Layout */
 
 hr {
-  margin: $margin * 2 0;
-  color: $primary-color;
+  margin: calc(var(--margin) * 2) 0;
+  color: var(--primary-color);
   background-color: black;
   height: 1px;
 }
 
 main {
-  margin: $margin * 4 0;
+  margin: calc(var(--margin) * 4) 0;
 }
 
 details {
-  margin: $margin * 2 0;
+  margin: calc(var(--margin) * 2) 0;
 }
 
-// Entries Layout
+/* Entries Layout */
 
 .invisibleMessage {
   display: none;
 }
 
-@media only screen and (max-width: $breakpoint) {
+@media only screen and (max-width: 50em) {
   .invisibleMessage {
     display: block;
   }
@@ -78,27 +76,28 @@ details {
 
 .harmonic-collection-entries {
   opacity: 0;
-  margin:$margin*4 0;
+  margin: calc(var(--margin) * 4) 0;
+}
 
-  @media (min-width: $breakpoint) {
+@media (min-width: 50em) {
+  .harmonic-collection-entries {
     opacity: 1;
     align-items: start;
     display: grid;
     grid-auto-rows: min-content;
     grid-template-columns: repeat(11, 1fr); /* Creates 11 equal columns */
-    gap: $margin * 2; /* Optional: Adds space between columns */
+    gap: calc(var(--margin) * 2); /* Optional: Adds space between columns */
     overflow-x: auto; /* Enables horizontal scrolling */
-    column-gap: $margin * 2;
+    column-gap: calc(var(--margin) * 2);
     justify-content: start;
   }
 }
 
-// Collapsible
+/* Collapsible */
 
 summary {
   display: flex;
   flex-direction: row;
-  // gap: $margin * 0.15;
   justify-content: space-between;
 }
 
@@ -118,7 +117,7 @@ details[open] summary h3 span::after {
 }
 
 details[open] summary {
-  color: $red-accent-80;
+  color: var(--red-accent-80);
 }
 
 details[open] .session-detail {
@@ -137,7 +136,7 @@ details[open] .session-detail {
 summary {
   display: flex;
   cursor: pointer;
-  margin: $margin 0;
+  margin: var(--margin) 0;
 }
 
 summary::-webkit-details-marker {
@@ -151,10 +150,10 @@ details {
 .session-detail {
   display: flex;
   flex-direction: column;
-  gap: $margin;
+  gap: var(--margin);
 }
 
-// Type
+/* Type */
 
 h1 {
   font-size: 4rem;
@@ -169,24 +168,24 @@ h1 {
 
 h2 {
   font-size: 1.2rem;
-  color: $red-accent;
+  color: var(--red-accent);
   text-transform: uppercase;
 }
 
 h3 {
   font-size: 1.2rem;
   font-weight: 400;
-  margin: $margin * 0.1;
+  margin: calc(var(--margin) * 0.1);
 }
 
 h4 {
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 600;
-  margin: $margin * 0.1;
+  margin: calc(var(--margin) * 0.1);
 }
 
-// Links
+/* Links */
 
 ul {
   list-style-type: none;
@@ -197,11 +196,11 @@ ul {
 ol {
   list-style-type: none;
   margin: 0;
-  padding-left: $margin;
+  padding-left: var(--margin);
 }
 
 ol > li {
-  margin: $margin * 0.1 0;
+  margin: calc(var(--margin) * 0.1) 0;
 }
 
 ol > li::before {
@@ -210,11 +209,7 @@ ol > li::before {
 
 a {
   text-decoration: none;
-  color: $primary-color;
-}
-
-a:hover {
-  // color: $blue-accent;
+  color: var(--primary-color);
 }
 
 a::after {
@@ -222,14 +217,7 @@ a::after {
   margin-left: 4px;
 }
 
-// title animation
-
-// question
-
-// .question {
-//   animation-name: opacityChange;
-//   animation-duration: 3s;
-// }
+/* Title animation */
 
 .question:hover::after {
   content: "How relaxed do you feel in this moment?";
@@ -242,60 +230,72 @@ a::after {
 }
 
 @keyframes fadeIn {
-  0%    { opacity: 0; }
-  100%  { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@keyframes fadeOut {
-  0%    { opacity: 1; }
-  100%  { opacity: 0; }
-}
-
-
-// students
+/* Students */
 
 #april {
-  grid-row: 2; /* Moves element(s) with id "april" to the 2nd row */
+  grid-row: 2;
 }
+
 #charlotte {
   grid-row: 3;
 }
+
 #elsa {
   grid-row: 4;
 }
+
 #hoon {
-  grid-row: 5; /* Moves element(s) with id "april" to the 2nd row */
+  grid-row: 5;
 }
+
 #iris {
   grid-row: 6;
 }
+
 #isabella {
   grid-row: 7;
 }
+
 #julia {
-  grid-row: 8; /* Moves element(s) with id "april" to the 2nd row */
+  grid-row: 8;
 }
+
 #leyla {
   grid-row: 9;
 }
+
 #linda {
   grid-row: 10;
 }
+
 #megan {
-  grid-row: 11; /* Moves element(s) with id "april" to the 2nd row */
+  grid-row: 11;
 }
+
 #michael {
   grid-row: 12;
 }
+
 #minnie {
   grid-row: 13;
 }
+
 #reika {
-  grid-row: 14; /* Moves element(s) with id "april" to the 2nd row */
+  grid-row: 14;
 }
+
 #temperence {
   grid-row: 15;
 }
+
 #tn {
   grid-row: 16;
 }
