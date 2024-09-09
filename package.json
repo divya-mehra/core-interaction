@@ -1,16 +1,9 @@
 {
-  "devDependencies": {
-    "sass": "^1.77.8"
-  },
   "scripts": {
-    "sass": "sass scss/base.scss dist/css/base.css --watch",
-    "build:sass": "sass scss/base.scss dist/css/base.css",
-    "dev": "npm run sass",
-    "deploy:checkout": "git checkout deploy || git checkout -b deploy",
-    "deploy:merge-main": "git merge main",
-    "deploy:build": "npm run build:sass",
+    "deploy:checkout": "git checkout deploy",
+    "deploy:reset-main": "git reset --hard main",
     "deploy:commit": "git add . && git commit -m 'Prepare deployment'",
-    "deploy:push": "git push origin deploy",
-    "deploy": "npm run deploy:checkout && npm run deploy:merge-main && npm run deploy:build && npm run deploy:commit && npm run deploy:push && git checkout main"
+    "deploy:push": "git push origin deploy --force",
+    "deploy": "npm run deploy:checkout && npm run deploy:reset-main && npm run deploy:commit && npm run deploy:push && git checkout main"
   }
 }
