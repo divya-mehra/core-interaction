@@ -10,7 +10,7 @@ h1 {
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 21px;
 }
 
 ul {
@@ -19,25 +19,21 @@ ul {
 
 #list-one {
   margin-top: 50px;
-  line-height: 200%;
+  line-height: 30px;
 }
 
 .flashdance {
   background: yellow;
   padding: 20px;
   text-align: center;
-  width: calc(50% - 40px);
-  margin-left: 0;
+
 }
 
 .slowdance {
   color: yellow;
   background: rgb(82, 75, 75);
   padding: 20px;
-  text-align: right;
-  width: calc(50% - 40px);
-  margin-left: auto;
-  margin-right: 0;
+  text-align: center;
 }
 
 #oddball {
