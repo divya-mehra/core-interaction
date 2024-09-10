@@ -219,15 +219,22 @@ a::after {
 
 /* Title animation */
 
-.question:hover::after {
+.questionOne:hover::after {
   content: "How relaxed do you feel in this moment?";
   animation-name: fadeIn;
   animation-duration: 5s;
 }
 
-.question::after {
+.questionOne::after {
   content: "Today's question";
 }
+
+
+.questionTwo {
+  opacity: 1; /* Start invisible */
+  transition: opacity 2s ease-in-out; /* Fade-in effect */
+}
+
 
 @keyframes fadeIn {
   0% {
@@ -237,6 +244,28 @@ a::after {
     opacity: 1;
   }
 }
+
+/* Input */
+
+input[type=text] {
+  padding: 6px;
+  margin: 0 8px 8px 0;
+  border: 1px black solid;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+button#submitButton {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px black solid;
+  background-color: transparent;
+}
+
+button#submitButton:active {
+  background-color: var(--red-accent-60);
+}
+
 
 /* Students */
 

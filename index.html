@@ -2,7 +2,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Core 1: Interaction" />
   <link rel="stylesheet" href="base.css" />
-  <script src="js/script.js" defer></script>
+  <script src="js/script.js" type="module" defer></script>
+  
   <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.png" />
   <title>Core 1: Interaction, Section H, Parsons</title>
 </head>
@@ -38,16 +39,10 @@
               >Are.na (RIP)</a
             >
           </li>
-          <!-- <li>
-            <a
-              href="https://drive.google.com/drive/folders/1rD4TbChjyHAnfFqF0uqFJRn64m2WGeir?usp=drive_link"
-              >Drive</a
-            >
-          </li> -->
+
           <li>
             <a href="https://calendly.com/divyamehra/parsons">Office Hours</a>
           </li>
-          <!-- <li>Slack</li> -->
         </ul>
       </div>
       <div class="school">
@@ -149,7 +144,7 @@
               >
             </h4>
           </div>
-          <div class="question"></div>
+          <div class="questionOne"></div>
           <div>
             <h4>Agenda</h4>
             <ol>
@@ -165,11 +160,15 @@
           <div>
             <h4>Assignments</h4>
             <ol>
-              <li>Upload your Entry 1 file to Canvas (entry-1.html). Make sure to
-              give it an appropriate title.</li>
-              <li>In the description, write about your process, any issues you had,
-              breakthroughs, etc. Alternatively, say something about how
-              you approached hierarchy using only HTML.</li>
+              <li>
+                Upload your Entry 1 file to Canvas (entry-1.html). Make sure to
+                give it an appropriate title.
+              </li>
+              <li>
+                In the description, write about your process, any issues you
+                had, breakthroughs, etc. Alternatively, say something about how
+                you approached hierarchy using only HTML.
+              </li>
             </ol>
           </div>
           <!-- End Assignments -->
@@ -186,16 +185,22 @@
             <!-- <h4>Class Notes</h4> -->
           </div>
           <div>
+          <input id="songInput" type="text" placeholder="Enter a song you like" />
+          <input id="artistInput" type="text" placeholder="Who's the artist?" />
+          <button id="submitButton">Submit</button>
+          <div id="thankYouMessage"></div>
+        </div>
+          <div>
             <h4>Agenda</h4>
             <ol>
-              <li>Assignment Share</li>
+              <li>Peer Feedback</li>
+              <li>HTML Review</li>
               <li>Introduction to CSS</li>
-              <li>Typographic Fun</li>
+              <li><a href="/sandboxes/css_sandbox.html">CSS Playground</a></li>
               <li>b r e a k</li>
-              <li>Code Lab</li>
-              <li>In-Class Activity: Type Served Four Ways</li>
-              <li>Github Setup</li>
-              <li>Assignment Overview</li>
+              <li>Code Lab: Deconstruct CSS</li>
+              <li>Typographic Hierarchy</li>
+              <li>Web Fonts vs. Custom Fonts</li>
             </ol>
           </div>
         </div>
@@ -266,5 +271,3 @@
     <a href="https://www.nikafisher.com/">Nika Simovich Fisher</a>.
   </main>
 </body>
-  
-

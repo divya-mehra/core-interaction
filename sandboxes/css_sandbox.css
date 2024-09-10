@@ -1,0 +1,57 @@
+body {
+  margin: 50px;
+  font-family: Helvetica;
+  background-color: rgb(247, 253, 253);
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  color: blue;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+ul {
+  text-transform: lowercase;
+}
+
+#list-one {
+  margin-top: 50px;
+  line-height: 200%;
+}
+
+.flashdance {
+  background: yellow;
+  padding: 20px;
+  text-align: center;
+  width: calc(50% - 40px);
+  margin-left: 0;
+}
+
+.slowdance {
+  color: yellow;
+  background: rgb(82, 75, 75);
+  padding: 20px;
+  text-align: right;
+  width: calc(50% - 40px);
+  margin-left: auto;
+  margin-right: 0;
+}
+
+#oddball {
+    cursor:crosshair;
+}
+
+.magic-text:hover {
+    opacity: 0;
+}
+
+.invisible-text {
+    opacity: 0;
+}
+
+.invisible-text:hover {
+    opacity: 1;
+}
