@@ -153,6 +153,10 @@ details {
   gap: var(--margin);
 }
 
+.demo-item {
+  margin: var(--margin) 0;
+}
+
 /* Type */
 
 h1 {

@@ -1,0 +1,14 @@
+.demo-section {
+    margin-bottom: 64px;
+}
+
+.demo-li {
+    list-style-type:disc;
+    padding: 4px 0;
+    
+}
+
+ul {
+    margin: 24px 0;
+    font-size: 16px;
+}
