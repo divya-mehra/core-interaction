@@ -75,21 +75,16 @@ details {
 }
 
 .harmonic-collection-entries {
-  opacity: 0;
+  
   margin: calc(var(--margin) * 4) 0;
 }
 
 @media (min-width: 50em) {
   .harmonic-collection-entries {
-    opacity: 1;
-    align-items: start;
-    display: grid;
-    grid-auto-rows: min-content;
-    grid-template-columns: repeat(11, 1fr); /* Creates 11 equal columns */
-    gap: calc(var(--margin) * 2); /* Optional: Adds space between columns */
-    overflow-x: auto; /* Enables horizontal scrolling */
-    column-gap: calc(var(--margin) * 2);
-    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--margin)*1);
+
   }
 }
 
@@ -221,6 +216,10 @@ a::after {
   margin-left: 4px;
 }
 
+a:hover {
+  color: var(--red-accent)
+}
+
 /* Title animation */
 
 .questionOne:hover::after {
@@ -268,67 +267,4 @@ button#submitButton {
 
 button#submitButton:active {
   background-color: var(--red-accent-60);
-}
-
-
-/* Students */
-
-#april {
-  grid-row: 2;
-}
-
-#charlotte {
-  grid-row: 3;
-}
-
-#elsa {
-  grid-row: 4;
-}
-
-#hoon {
-  grid-row: 5;
-}
-
-#iris {
-  grid-row: 6;
-}
-
-#isabella {
-  grid-row: 7;
-}
-
-#julia {
-  grid-row: 8;
-}
-
-#leyla {
-  grid-row: 9;
-}
-
-#linda {
-  grid-row: 10;
-}
-
-#megan {
-  grid-row: 11;
-}
-
-#michael {
-  grid-row: 12;
-}
-
-#minnie {
-  grid-row: 13;
-}
-
-#reika {
-  grid-row: 14;
-}
-
-#temperence {
-  grid-row: 15;
-}
-
-#tn {
-  grid-row: 16;
 }
